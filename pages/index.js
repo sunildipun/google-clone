@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Avatar from './../components/Avatar';
+import Footer from './../components/Footer';
 
 import Image from 'next/image';
 
@@ -8,7 +9,7 @@ import { MicrophoneIcon, SearchIcon, ViewGridIcon } from '@heroicons/react/solid
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center h-screen">
       <Head>
         <title>Google</title>
         <link rel="icon" href="/favicon.ico" />
@@ -32,8 +33,8 @@ export default function Home() {
       </header>
 
       {/**Body */}
-      <form className="flex flex-col items-center mt-44 flex-grow">
-        <Image src="https://cdn.vox-cdn.com/thumbor/Pkmq1nm3skO0-j693JTMd7RL0Zk=/0x0:2012x1341/1200x800/filters:focal(0x0:2012x1341)/cdn.vox-cdn.com/uploads/chorus_image/image/47070706/google2.0.0.jpg" alt="google" height={100} width={100}/>
+      <form className="flex flex-col items-center mt-44 flex-grow w-4/5">
+        <Image src="https://www.google.co.uk/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="google" height={100} width={300}/>
 
         <div className="flex w-full mt-5 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full border-gray-200 px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl">
           <SearchIcon className="h-5 mr-3 text-gray-500" />
@@ -49,6 +50,7 @@ export default function Home() {
       </form>
 
       {/**Footer */}
+      <Footer />
     </div>
   )
 }
